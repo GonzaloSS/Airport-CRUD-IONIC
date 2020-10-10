@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>updateBooking</ion-title>
+    <ion-back-button defaultHref="/" slot="start"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="updateBookingForm" (ngSubmit)="onFormSubmit()">
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input formControlName="name" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Surname</ion-label>
+      <ion-input formControlName="surname" type="text" required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">DNI</ion-label>
+      <ion-input formControlName="dni" type="text" required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Year</ion-label>
+      <ion-input formControlName="year" type="number" required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Plane</ion-label>
+      <ion-select formControlName="plane">
+        <ion-select-option *ngFor="let p of plane" value="{{p.model}}">{{p.model}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Business</ion-label>
+      <ion-select formControlName="business">
+        <ion-select-option *ngFor="let b of business" value="{{b.name}}">{{b.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" shape="full" expand="block">Update booking</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

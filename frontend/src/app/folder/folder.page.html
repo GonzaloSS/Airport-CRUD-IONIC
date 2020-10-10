@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+   <div class="ion-padding">
+     <ion-slides pages>
+       <ion-slide>
+        <ion-row >
+          <ion-col col col-7>
+            <img src="https://lh3.googleusercontent.com/proxy/P5mKD-47Ch4Oftw4X7yjH7wuSHOFZHGjzbea4OlTIERcFjViEunRuWJwaB2rO2irjldlygbsCK6fozWX1NWzJdRz5y0iooVQqrOdD-aZzNe8GO51mSQa"/>
+              <P id="slide1" >Bienvenido/a a AirDreaming, una aplicación de reservas coon toda 
+                información sobre los aviones y compañias</P>
+          </ion-col>
+    </ion-row>
+       </ion-slide>
+       <ion-slide>
+        <ion-row >
+          <ion-col col col-7>
+            <img src="https://abogadoresponde.net/wp-content/uploads/2014/05/aerolineas.png"/>
+          
+              <P id="slide1" >En esta aplicación encontraremos un montón de compañías aéreas como Binter, Iberia, Volotea, etc...</P>
+          </ion-col>
+        </ion-row>
+      </ion-slide>
+      <ion-slide>
+        <ion-row >
+          <ion-col col col-7>
+              <P >Ahora veamos, que desea?</P>
+
+              <ion-button (click) = "presentActionSheet()" expand="block">Getting Started</ion-button>
+              
+          </ion-col>
+        </ion-row>
+       </ion-slide>
+     </ion-slides>
+   </div>
+  </div>
+</ion-content>
+

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>history</ion-title>
+    <ion-back-button defaultHref="/" slot="start"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card  *ngFor="let b of booking">
+    <ion-card-header>
+      
+      <ion-card-title>Year: {{b.year}}</ion-card-title>
+      <ion-card>Plane: {{b.plane}} </ion-card>
+      <ion-card>Business: {{b.business}} </ion-card>
+      <ion-card>Travel year: {{b.year}} </ion-card>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-card-subtitle>Name: {{b.name}}</ion-card-subtitle>
+      <ion-card>Surname: {{b.surname}} </ion-card>
+      <ion-card>DNI: {{b.dni}}</ion-card>
+    </ion-card-content>
+    <ion-item>
+      <ion-icon (click)="updateBooking(b.id)" name="create" slot="end"></ion-icon>
+      <ion-icon (click)="deleteBooking(b.id)" name="trash" slot="end">
+      </ion-icon>
+    </ion-item>
+  </ion-card>
+</ion-content>
+
+<ion-button (click) = "goToBookings()">Add a booking</ion-button>
